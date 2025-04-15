@@ -2,13 +2,13 @@ package Part1;
 
 public class SeniorSupportHandler extends SupportHandler {
     @Override
-    public void handle(String issue) {
-        if ("account ban".equals(issue) || "data loss".equals(issue)) {
-            System.out.println("SeniorSupport Handled " + issue);
+    public void handle(String problem) {
+        if ("account ban".equals(problem) || "data loss".equals(problem)) {
+            System.out.println("SeniorSupport Handled " + problem);
         } else if (nextHandler != null) {
-            nextHandler.handle(issue);
+            nextHandler.handle(problem);
         } else {
-            System.out.println("SeniorSupport Cannot handle " + issue + " — escalate manually");
+            System.out.println("SeniorSupport Cannot handle " + problem + " — escalate manually");
         }
     }
 }
